@@ -8,7 +8,7 @@ Labyrinth is a text based interactive logic puzzle. It was inspired by â€˜Sarahâ
 
 ### Hangman
 
-The one most of us remember learning as children. Uses an extensive wordlist found below, which makes this an excellent challenge. 
+The one most of us remember learning as children. Uses an extensive wordlist (58,000+) found below, which makes this an excellent challenge. 
 
 http://en.wikipedia.org/wiki/Hangman_%28game%29
 
