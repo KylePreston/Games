@@ -42,7 +42,7 @@ while i < 10:
 	try:
 		ans = int(raw_input("> "))
 	except ValueError:
-		ans = -1
+		ans = -1	# This passes a value that rando cannot be, and hence fails the if statement
 
 	if ans == rando:
 		print('Correct!\n')
