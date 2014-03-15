@@ -1,6 +1,5 @@
-# This is a Random Roman Numeral Generator that tests the user's
-# knowledge of Roman Numerals. I've found it to be a fantastic daily 
-# brain food exercise!
+# This is a Random Roman Numeral Generator that tests the user's knowledge of Roman Numerals.
+# I've found it to be a fantastic daily brain food exercise!
 
 # Kyle Preston
 # 2014
