@@ -1,5 +1,5 @@
-# This is a Random Roman Numeral Generator that tests the user's knowledge of Roman Numerals.
-# I've found it to be a fantastic daily brain food exercise!
+# This is a Random Roman Numeral Generator that tests the user's knowledge of Roman Numerals. I've found it to be a fantastic daily 
+# brain food exercise!
 
 # Kyle Preston
 # 2014
@@ -38,7 +38,11 @@ print('_'* 55)
 while i < 10:
 	rando = random.randint(0, 4999)
 	print(convertIntToRoman(rando))
-	ans = int(raw_input("> "))
+
+	try:
+		ans = int(raw_input("> "))
+	except ValueError:
+		ans = -1
 
 	if ans == rando:
 		print('Correct!\n')
