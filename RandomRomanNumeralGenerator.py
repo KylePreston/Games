@@ -12,7 +12,7 @@ total = 0
 i = 0
 
 def convertIntToRoman(random_number):
-	"""Converts any number < 5000 to Roman Numerals. """
+	"""Converts any number < 4000 to Roman Numerals. """
 
 	roman_numerals = {
 	1: 'I', 4: 'IV', 5: 'V', 9: 'IX',
@@ -36,13 +36,13 @@ print('\nPress CTRL-Z to escape')
 print('_'* 55)
 
 while i < 10:
-	rando = random.randint(1, 4999)
+	rando = random.randint(1, 3999)
 	print(convertIntToRoman(rando))
 
 	try:
 		ans = int(raw_input("> "))
 	except ValueError:
-		ans = -1	# This passes a value that rando cannot be, and hence fails the if statement
+		ans = -1    # This passes a value that rando cannot be and hence fails the if statement
 
 	if ans == rando:
 		print('Correct!\n')
