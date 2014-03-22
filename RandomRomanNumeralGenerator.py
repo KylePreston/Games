@@ -36,7 +36,7 @@ print('\nPress CTRL-Z to escape')
 print('_'* 55)
 
 while i < 10:
-	rando = random.randint(0, 4999)
+	rando = random.randint(1, 4999)
 	print(convertIntToRoman(rando))
 
 	try:
