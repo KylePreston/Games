@@ -2,14 +2,14 @@
 # or decrypt a message for you. 
 
 # For a visualization: http://inventwithpython.com/cipherwheel/
-import pyperclip
+# import pyperclip
 import random
 
 # Global Variables
 abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-# code_key = random.randint(1, 25)
-code_key = 2
+code_key = random.randint(1, 25)
+
 numericalAlphabet = {
 
 	'A': 0, 'B': 1, 'C': 2, 'D': 3,
