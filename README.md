@@ -8,7 +8,9 @@ Test your skills at converting Roman Numerals to Base 10 or vice versa. To brush
 
 ### Caesar Cipher
 Say you receive an encrypted message. You know that it's been encrypted using a Caesar Cipher, but you don't know the decryption key. This script will help you decrypt the message. 
-The idea was inspired by Al Sweigart's 'Hacking Secret Ciphers With Python'.
+The idea was inspired by Al Sweigart's 'Hacking Secret Ciphers With Python'. You will need the pyperclip module to use this script, found below.
+
+https://pypi.python.org/pypi/pyperclip
 
 http://en.wikipedia.org/wiki/Caesar_cipher
 
