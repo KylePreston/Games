@@ -2,13 +2,11 @@
 # or decrypt a message for you. 
 
 # For a visualization: http://inventwithpython.com/cipherwheel/
-# import pyperclip
-import random
+#import pyperclip
+#import random
 
 # Global Variables
 abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-code_key = random.randint(1, 25)
 
 numericalAlphabet = {
 
@@ -29,7 +27,7 @@ def encryptionMode():
 	'''Returns either Encryption or Decryption mode '''
 
 	print('\n(Type E or D)')
-	answer = raw_input('Would you like to encrypt a message of your own or decrypt a received message?\n')
+	answer = raw_input('Would you like to encrypt a message of your own or decrypt a received message?\n').upper()
 	if answer.startswith('E'):
 		return 1
 	else:
@@ -40,21 +38,23 @@ def getDisplay():
 
 	if encryptionMode():
 		sentence = raw_input('\nType your message: ')
-
+		code_key = int(raw_input('What is the code key? '))
 		draw_box()
+		print('\nThe code key is %d' % code_key)
 		print('Encryption: '),
-		print(encryptMessage(sentence))
+		print(encryptMessage(sentence, code_key))
 		draw_box()
 
 	else:
 		sentence = raw_input('\nType your message: ')
+		code_key = int(raw_input('What is the code key? '))
 
 		draw_box()
 		print('Decryption: '),
-		print(decryptMessage(sentence))
+		print(decryptMessage(sentence, code_key))
 		draw_box()
 
-def encryptMessage(message):
+def encryptMessage(message, code_key):
 	'''Returns an encrypted version of the message '''
 
 	message = list(message.upper())
@@ -77,7 +77,7 @@ def encryptMessage(message):
 
 	return ''.join(message)
 
-def decryptMessage(message):
+def decryptMessage(message, code_key):
 	'''Returns a decrypted version of the message '''
 
 	message = list(message.upper())
@@ -102,7 +102,4 @@ def decryptMessage(message):
 	return ''.join(message)
 
 # Main 
-draw_box()
-print('\nThe code key is %d' % code_key)
-draw_box()
 getDisplay()
