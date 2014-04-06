@@ -8,8 +8,8 @@ import random
 # Global Variables
 abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-code_key = random.randint(1, 25)
-
+# code_key = random.randint(1, 25)
+code_key = 2
 numericalAlphabet = {
 
 	'A': 0, 'B': 1, 'C': 2, 'D': 3,
@@ -57,8 +57,8 @@ def getDisplay():
 def encryptMessage(message):
 	'''Returns an encrypted version of the message '''
 
-	message = message.upper()
-
+	message = list(message.upper())
+	charNumber = 0
 	for char in message:
 		encryptionNumber = 0
 		if char in abc:
@@ -66,18 +66,23 @@ def encryptMessage(message):
 			if encryptionNumber >= 26:
 				encryptionNumber -= 26
 			
-			for key, val in numericalAlphabet.items():
-				if val == encryptionNumber:
-					message = message.replace(char, key, 1)
+			for combo in sorted(numericalAlphabet.items()):
+				if combo[1] == encryptionNumber:
+					message.pop(charNumber)
+					message.insert(charNumber, combo[0])
+					charNumber += 1
 					break
+		else:
+			charNumber += 1
 
-	return message
+	return ''.join(message)
 
 def decryptMessage(message):
 	'''Returns a decrypted version of the message '''
 
-	message = message.upper()
-	
+	message = list(message.upper())
+	charNumber = 0
+
 	for char in message:
 		decryptionNumber = 0
 		if char in abc:
@@ -85,12 +90,16 @@ def decryptMessage(message):
 			if decryptionNumber < 0:
 				decryptionNumber += 26
 
-			for key, val in numericalAlphabet.items():
-				if val == decryptionNumber:
-					message = message.replace(char, key, 1)
+			for combo in sorted(numericalAlphabet.items()):
+				if combo[1] == decryptionNumber:
+					message.pop(charNumber)
+					message.insert(charNumber, combo[0])
+					charNumber += 1
 					break
+		else:
+			charNumber += 1
 
-	return message
+	return ''.join(message)
 
 # Main 
 draw_box()
