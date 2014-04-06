@@ -7,9 +7,12 @@ A collection of Python games I've built.
 Test your skills at converting Roman Numerals to Base 10 or vice versa. To brush up on your Roman Numeral reading skills, visit http://www.youtube.com/watch?v=Q5_2o8MITH4 for a nice history lesson. 
 
 ### Caesar Cipher
-Say you receive an encrypted message. You know that it's been encrypted using a Caesar Cipher http://en.wikipedia.org/wiki/Caesar_cipher
-but you don't know the key value used. This script will help you decrypt the message. 
-The idea was inspired by Al Sweigart's 'Hacking Secret Ciphers With Python' http://inventwithpython.com/hacking/index.html
+Say you receive an encrypted message. You know that it's been encrypted using a Caesar Cipher, but you don't know the decryption key. This script will help you decrypt the message. 
+The idea was inspired by Al Sweigart's 'Hacking Secret Ciphers With Python'.
+
+http://en.wikipedia.org/wiki/Caesar_cipher
+
+http://inventwithpython.com/hacking/index.html
 
 ### Hangman
 
