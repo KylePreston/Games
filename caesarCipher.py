@@ -2,8 +2,8 @@
 # or decrypt a message for you. 
 
 # For a visualization: http://inventwithpython.com/cipherwheel/
-#import pyperclip
-#import random
+# import pyperclip
+# import random
 
 # Global Variables
 abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -37,23 +37,27 @@ def getDisplay():
 	'''User display '''
 
 	if encryptionMode():
-		sentence = raw_input('\nType your message: ')
-		code_key = int(raw_input('What is the code key? '))
-		draw_box()
-		print('\nThe code key is %d' % code_key)
-		print('Encryption: '),
-		print(encryptMessage(sentence, code_key))
-		draw_box()
+		try:
+			sentence = raw_input('\nType your message: ')
+			code_key = int(raw_input('What is the code key? '))
+			draw_box()
+			print('Encryption: '),
+			print(encryptMessage(sentence, code_key))
+			draw_box()
+		except ValueError:
+			print('Need to type a number!')
 
 	else:
-		sentence = raw_input('\nType your message: ')
-		code_key = int(raw_input('What is the code key? '))
+		try:
+			sentence = raw_input('\nType your message: ')
+			code_key = int(raw_input('What is the code key? '))
 
-		draw_box()
-		print('Decryption: '),
-		print(decryptMessage(sentence, code_key))
-		draw_box()
-
+			draw_box()
+			print('Decryption: '),
+			print(decryptMessage(sentence, code_key))
+			draw_box()
+		except ValueError:
+			print('Need to type a number!')
 def encryptMessage(message, code_key):
 	'''Returns an encrypted version of the message '''
 
@@ -68,7 +72,7 @@ def encryptMessage(message, code_key):
 			
 			for combo in sorted(numericalAlphabet.items()):
 				if combo[1] == encryptionNumber:
-					message.pop(charNumber)
+					del(message[charNumber])
 					message.insert(charNumber, combo[0])
 					charNumber += 1
 					break
@@ -92,7 +96,7 @@ def decryptMessage(message, code_key):
 
 			for combo in sorted(numericalAlphabet.items()):
 				if combo[1] == decryptionNumber:
-					message.pop(charNumber)
+					del(message[charNumber])
 					message.insert(charNumber, combo[0])
 					charNumber += 1
 					break
