@@ -1,5 +1,5 @@
 # This Caesar Cipher script contains functions that will either encrypt
-# or decrypt a message for you. 
+# or decrypt a message for you, as long as you konw the key. 
 
 # For a visualization: http://inventwithpython.com/cipherwheel/
 # import pyperclip
@@ -58,6 +58,7 @@ def getDisplay():
 			draw_box()
 		except ValueError:
 			print('Need to type a number!')
+			
 def encryptMessage(message, code_key):
 	'''Returns an encrypted version of the message '''
 
